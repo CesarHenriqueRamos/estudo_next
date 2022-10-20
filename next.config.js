@@ -1,22 +1,7 @@
-const { i18n } = require("./next-i18next.config");
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
   reactStrictMode: true,
-  headers: async () => {
-    return [
-      {
-        source: "/api/:path*",
-        headers: [
-          {
-            key: "Access-Control-Allow-Origin",
-            value: "*",
-          },
-        ],
-      },
-    ];
-  },
-  i18n,
-};
+  swcMinify: true,
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
